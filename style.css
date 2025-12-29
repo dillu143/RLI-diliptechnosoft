@@ -2,45 +2,38 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  color: #1f2933;
+  color: #1f2937;
 }
 
-/* Navbar */
-.navbar {
+.header {
   position: fixed;
-  top: 0;
   width: 100%;
-  background: #ffffff;
+  background: #fff;
+  padding: 15px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   z-index: 1000;
 }
 
 .logo {
   font-size: 22px;
   font-weight: 700;
-  color: #0f62fe;
+  color: #0d6efd;
 }
 
 nav a {
   margin-left: 25px;
   text-decoration: none;
-  color: #334155;
-  font-weight: 500;
+  color: #374151;
 }
 
-nav a:hover {
-  color: #0f62fe;
-}
-
-.menu-toggle {
+.menu {
   display: none;
   font-size: 26px;
   cursor: pointer;
@@ -50,7 +43,7 @@ nav a:hover {
 .hero {
   height: 100vh;
   background:
-    linear-gradient(rgba(15,98,254,0.85), rgba(15,98,254,0.85)),
+    linear-gradient(rgba(13,110,253,0.85), rgba(13,110,253,0.85)),
     url("images/hero.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -58,30 +51,22 @@ nav a:hover {
   text-align: center;
 }
 
-.hero-content {
-  max-width: 700px;
-  padding: 20px;
-}
-
-.hero h1 {
-  color: #fff;
+.hero-text h1 {
+  color: white;
   font-size: 46px;
 }
 
-.hero p {
+.hero-text p {
   color: #e0e7ff;
   margin: 20px 0;
-  font-size: 18px;
 }
 
-.hero button {
+.hero-text button {
   padding: 12px 30px;
-  background: #ffffff;
   border: none;
-  color: #0f62fe;
-  font-size: 16px;
+  background: white;
+  color: #0d6efd;
   font-weight: 600;
-  border-radius: 6px;
   cursor: pointer;
 }
 
@@ -91,23 +76,11 @@ nav a:hover {
   text-align: center;
 }
 
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.section p {
-  max-width: 850px;
-  margin: auto;
-  color: #475569;
-}
-
 .light {
   background: #f8fafc;
 }
 
-/* Services */
-.service-cards {
+.cards {
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -115,46 +88,45 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
-.service-card {
-  background: #fff;
+.card {
   width: 300px;
+  background: white;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   overflow: hidden;
 }
 
-.service-card img {
+.card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-.service-card h3 {
+.card h3 {
   margin: 15px 0 10px;
 }
 
-.service-card p {
+.card p {
   padding: 0 20px 25px;
-  color: #475569;
 }
 
 /* Stats */
 .stats {
+  background: #0d6efd;
+  color: white;
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 80px;
   padding: 60px 0;
-  background: #0f62fe;
-  color: white;
 }
 
-.stat h3 {
-  font-size: 40px;
+.stats h3 {
+  font-size: 38px;
 }
 
 /* Footer */
 footer {
-  background: #0f172a;
+  background: #111827;
   color: #cbd5e1;
   text-align: center;
   padding: 20px;
@@ -167,9 +139,8 @@ footer {
     position: absolute;
     top: 70px;
     right: 20px;
-    background: #fff;
+    background: white;
     padding: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   }
 
   nav a {
@@ -177,7 +148,7 @@ footer {
     margin: 10px 0;
   }
 
-  .menu-toggle {
+  .menu {
     display: block;
   }
 
