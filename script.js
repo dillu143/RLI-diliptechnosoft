@@ -1,30 +1,28 @@
 function toggleMenu() {
-  const nav = document.getElementById("navMenu");
+  const nav = document.getElementById("nav");
   nav.style.display = nav.style.display === "block" ? "none" : "block";
 }
 
-function scrollToSection(id) {
+function scrollTo(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
 // Counter animation
-const counters = document.querySelectorAll('.counter');
-const speed = 200;
+const counters = document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
+  const target = +counter.getAttribute("data-target");
+  let count = 0;
 
-    const increment = target / speed;
-
+  const update = () => {
     if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 20);
+      count += Math.ceil(target / 100);
+      counter.innerText = count;
+      setTimeout(update, 30);
     } else {
       counter.innerText = target;
     }
   };
 
-  updateCount();
+  update();
 });
